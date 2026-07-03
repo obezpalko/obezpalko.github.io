@@ -5,13 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Personal website of Alex Bezpalko featuring projects and resources.">
+  <meta name="theme-color" content="#14110d">
   <title>Alex Bezpalko</title>
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-
   <link rel="stylesheet" href="style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-CH47G7TPMS"></script>
   <script>
@@ -25,81 +22,39 @@
 
 <body>
 
-  <header>
-    <div class="container">
-      <h1>Alex Bezpalko</h1>
-      <p class="subtitle">Developer & Creator building things for the web.</p>
+  <div class="page">
+    <div class="window">
+      <div class="titlebar">
+        <i></i><i></i><i></i>
+        <span class="path">alex@bezpalko — ~/</span>
+      </div>
+      <div class="window-body">
+        <p class="line"><span class="prompt"></span><span class="cmd">whoami</span></p>
+        <h1>Alex Bezpalko</h1>
+        <p class="role">Software developer &amp; creator. I build <b>small, useful tools</b> for the web.</p>
+
+        <p class="line"><span class="prompt"></span><span class="cmd">ls ~/projects</span></p>
+        <p class="ls">total 2</p>
+        <ul class="projects">
+          <li>
+            <a class="proj" href="/eoi/">
+              <span class="name">eoi/</span> <span class="flag">— local</span>
+              <span class="desc">Lessons &amp; vocabulary for EOI language exams</span>
+            </a>
+          </li>
+          <li>
+            <a class="proj" href="https://e4.bezpalko.mobi/" target="_blank" rel="noopener">
+              <span class="name">envelopes</span> <span class="flag">&rarr; e4.bezpalko.mobi &#8599;</span>
+              <span class="desc">Envelope budgeting, modernized — money in categories</span>
+            </a>
+          </li>
+        </ul>
+
+        <p class="line"><span class="prompt"></span><span class="caret" aria-hidden="true"></span></p>
+      </div>
     </div>
-  </header>
-
-  <main class="container projects-section">
-    <div class="section-title">Projects</div>
-
-    <div class="projects-grid">
-      <!-- EOI Project -->
-      <a href="/eoi/" class="card">
-        <div class="card-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
-            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
-          </svg>
-        </div>
-        <h2 class="card-title">EOI Resources</h2>
-        <p class="card-description">Educational resources, lessons, and vocabulary for language learning.</p>
-        <div class="card-arrow">
-          View Project
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <line x1="5" y1="12" x2="19" y2="12"></line>
-            <polyline points="12 5 19 12 12 19"></polyline>
-          </svg>
-        </div>
-      </a>
-
-      <!-- Envelopes Project -->
-      <a href="https://e4.bezpalko.mobi/" class="card" target="_blank" rel="noopener">
-        <div class="card-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="2" y="4" width="20" height="16" rx="2"></rect>
-            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
-          </svg>
-        </div>
-        <h2 class="card-title">Envelopes</h2>
-        <p class="card-description">Envelope budgeting, modernized — a personal finance tool for allocating money into categories.</p>
-        <div class="card-arrow">
-          View Project
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <line x1="5" y1="12" x2="19" y2="12"></line>
-            <polyline points="12 5 19 12 12 19"></polyline>
-          </svg>
-        </div>
-      </a>
-
-      <!-- Placeholder for future projects -->
-      <!--
-      <a href="#" class="card">
-        <div class="card-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
-        </div>
-        <h2 class="card-title">Another Project</h2>
-        <p class="card-description">Description of a cool future project goes here.</p>
-        <div class="card-arrow">
-          View Project
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-        </div>
-      </a>
-      -->
-    </div>
-  </main>
-
-  <footer>
-    <div class="container">
-      <p>&copy; 2026 Alex Bezpalko. <a href="/sitemap.xml">Sitemap</a></p>
-    </div>
-  </footer>
+    <footer>&copy; 2026 Alex Bezpalko &middot; <a href="/sitemap.xml">sitemap.xml</a></footer>
+  </div>
 
 </body>
 

@@ -4,63 +4,52 @@
   <xsl:template match="/">
     <html lang="en">
       <head>
-        <title>Sitemap</title>
+        <title>Sitemap — Alex Bezpalko</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        
+        <meta name="theme-color" content="#14110d"/>
         <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
-        <link rel="stylesheet" href="style.css"/>
-        <link rel="preconnect" href="https://fonts.googleapis.com"/>
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin"/>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+        <link rel="stylesheet" href="/style.css"/>
       </head>
       <body>
-        
-        <header>
-          <div class="container">
-            <h1>XML Sitemap</h1>
-            <p class="subtitle">
-              Generated for search engines. Lists <xsl:value-of select="count(sitemap:urlset/sitemap:url)"/> content pages.
-            </p>
+        <div class="page">
+          <div class="window">
+            <div class="titlebar">
+              <i></i><i></i><i></i>
+              <span class="path">alex@bezpalko — ~/sitemap.xml</span>
+            </div>
+            <div class="window-body">
+              <p class="line"><span class="prompt"></span><span class="cmd">cat sitemap.xml</span></p>
+              <p class="ls">
+                <xsl:value-of select="count(sitemap:urlset/sitemap:url)"/> pages indexed for search engines
+              </p>
+              <div class="table-scroll">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Location</th>
+                      <th>Modified</th>
+                      <th>Priority</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <xsl:for-each select="sitemap:urlset/sitemap:url">
+                      <tr>
+                        <td>
+                          <a href="{sitemap:loc}">
+                            <xsl:value-of select="sitemap:loc"/>
+                          </a>
+                        </td>
+                        <td><xsl:value-of select="sitemap:lastmod"/></td>
+                        <td><xsl:value-of select="sitemap:priority"/></td>
+                      </tr>
+                    </xsl:for-each>
+                  </tbody>
+                </table>
+              </div>
+            </div>
           </div>
-        </header>
-
-        <main class="container projects-section">
-          <div class="table-container">
-            <table>
-              <thead>
-                <tr>
-                  <th>Location</th>
-                  <th>Last Modified</th>
-                  <th>Priority</th>
-                </tr>
-              </thead>
-              <tbody>
-                <xsl:for-each select="sitemap:urlset/sitemap:url">
-                  <tr>
-                    <td>
-                      <a href="{sitemap:loc}">
-                        <xsl:value-of select="sitemap:loc"/>
-                      </a>
-                    </td>
-                    <td>
-                      <xsl:value-of select="sitemap:lastmod"/>
-                    </td>
-                    <td>
-                      <xsl:value-of select="sitemap:priority"/>
-                    </td>
-                  </tr>
-                </xsl:for-each>
-              </tbody>
-            </table>
-          </div>
-        </main>
-
-        <footer>
-          <div class="container">
-            <p>&#169; 2026 Alex Bezpalko. <a href="/">Back to Home</a></p>
-          </div>
-        </footer>
-
+          <footer>&#169; 2026 Alex Bezpalko &#183; <a href="/">cd ~/</a></footer>
+        </div>
       </body>
     </html>
   </xsl:template>
